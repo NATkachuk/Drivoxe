@@ -1,0 +1,85 @@
+@use '../../../style/mixins';
+@use '../../../style/reset';
+@use '../../../style/vars';
+
+body {
+    .section1 {
+        display: flex;
+        flex-direction: row;
+        align-items: space-beetwen;
+        gap: 182px;
+        background-image: url(/Drivoxe/src/assets/homepage/png/back.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 72px 30px;
+        &-container1{
+            @include mixins.Flex(column, flex-start, center, 84px);
+            &__box{
+                @include mixins.Flex(column, flex-start, flex-start, 56px);
+                &-title{
+                    @include mixins.Syne(56px, 700, 67px);
+                    width: 45%;
+                }
+                &-text{
+                    @include mixins.Syne(18px, 500, 24px);
+                    width: 37%;
+                    opacity: 0.6;
+                }
+                &-btn{
+                    @include mixins.Syne(16px, 700, 19px);
+                    color: vars.$main-color;
+                    background-color: vars.$button-color;
+                    padding: 10px 26px;
+                    border-radius: 32px;
+                }
+            }
+            &__box2{
+                @include mixins.Flex(row, flex-start, flex-start, 16px);
+            }
+        }
+        &-container2{
+            @include mixins.Flex(column, center, flex-start, 16px);
+            border-radius: 20px;
+            box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
+            padding: 30px;
+            z-index: 1;
+            position: absolute;
+            top: 248px;
+            right: 355px;
+            &__text1{
+                @include mixins.Syne(56px, 700, 67px);
+            }
+            &__text2{
+                @include mixins.Syne(18px, 500, 24px);
+                opacity: 0.6;
+                width: 70%;
+                text-align: center;
+            }
+        }
+        &-container3{
+            @include mixins.Flex(column, center, center, 160px);
+            &-wrap{
+                @include mixins.Flex(column, center, center, 32px);
+                .section1-container3__box{
+                    @include mixins.Flex(row, center, center, 0px);
+                    &-img{
+                        width: 100%;
+                    }
+                }
+                .section1-container3__box2{
+                    @include mixins.Flex(column, center, center, 16px);
+                    &-text1{
+                        @include mixins.Syne(20px, 600, 24px);
+                    }
+                    &-text2{
+                        @include mixins.Syne(14px, 400, 17px);
+                        opacity: 0.6;
+                        width: 70%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

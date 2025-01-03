@@ -1,0 +1,15 @@
+@use '../../../style/mixins';
+@use '../../../style/reset';
+@use '../../../style/vars';
+
+.nav {
+    &__list{
+        @include mixins.Flex(row, center, center, 64px);
+        &__item{
+            @include mixins.Syne(16px, 700, 19px);
+            color: vars.$secondary-color;
+            padding: 10px 5px;
+            text-decoration: none;
+        }
+    }
+}

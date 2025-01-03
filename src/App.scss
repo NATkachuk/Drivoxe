@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import './style/vars';
+@import './style/mixins';
+@import './style/reset';
+
+
+body {
+    background-color: $main-color;
+    color: $secondary-color;
+    padding: 20px;
+}

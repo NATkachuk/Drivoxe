@@ -1,0 +1,14 @@
+@mixin Syne ($fs,$fw,$lh ) {
+    font-family: 'Syne', sans-serif;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+
+@mixin Flex($fd,$ai,$jc,$gp) {
+    display: flex;
+    flex-direction: $fd;
+    align-items: $ai;
+    justify-content: $jc;
+    gap: $gp;
+}
