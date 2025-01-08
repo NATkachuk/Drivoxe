@@ -1,0 +1,26 @@
+@use '../../../style/mixins';
+@use '../../../style/reset';
+@use '../../../style/vars';
+
+.section3 {
+    @include mixins.Flex(column, center, center, 100px);
+    &-container{
+        padding-left: 50px;
+        @include mixins.Flex(row, center, center, 64px);
+        &__textbox{
+            @include mixins.Flex(column, center, center, 124px);
+            &-title{
+                @include mixins.Syne(56px, 700, 67px);
+                width: 67%;
+                text-align: center;
+            }
+            &-text{
+                @include mixins.Syne(18px, 500, 24px);
+                width: 47%;
+            }
+        }
+        &__img {
+            width: 50%;
+        }
+    }
+}

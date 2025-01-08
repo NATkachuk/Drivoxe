@@ -1,3 +1,86 @@
 @use '../../../style/mixins';
 @use '../../../style/reset';
 @use '../../../style/vars';
+
+.section2 {
+    @include mixins.Flex(column, center, center, 100px);
+    &-textbox{
+        @include mixins.Flex(column, center, center, 16px);
+        &__text{
+            @include mixins.Syne(20px, 600, 24px);
+        }
+        &__title{
+            @include mixins.Syne(56px, 700, 67px);
+        }
+    }
+    &-container{
+        @include mixins.Flex(column, center, center, 100px);
+        .section2-cards{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 64px;
+            .section2-card{
+                @include mixins.Flex(column, center, center, 32px);
+                padding: 12px;
+                background-color: rgba(34, 34, 34, 0.03);
+                border-radius: 10px;
+                &__img{
+                    width: 100%;
+                }
+                &__title{
+                    @include mixins.Syne(24px, 700, 29px);
+                }
+                &__box{
+                    @include mixins.Flex(row, flex-start, center, 65px);
+                    &-textbox{
+                        @include mixins.Flex(column, center, center, 8px);
+                        &-text{
+                            @include mixins.Syne(16px, 700, 19px);
+                            opacity: 0.5;
+                        }
+                        &-text1{
+                            @include mixins.Syne(24px, 700, 29px);
+                        }
+                    }
+                    &-btn{
+                        @include mixins.Syne(16px, 700, 19px);
+                        color: vars.$main-color;
+                        background-color: vars.$button-color;
+                        padding: 10px 26px;
+                        border-radius: 32px;
+                    }
+                }
+            }
+            .section2-card:hover{
+                background-color: vars.$button-color;
+                color: vars.$main-color;
+                .section2-card__title{
+                    color: vars.$main-color;
+                }
+                .section2-card__box-text{
+                    color: vars.$main-color;
+                }
+                .section2-card__box-text1{
+                    color: vars.$main-color;
+                }
+                .section2-card__box-btn{
+                    background-color: vars.$main-color;
+                    color: vars.$button-color;
+                }
+            }
+        }
+        .section2-pagination{
+            &__list{
+                @include mixins.Flex(row, center, center, 10px);
+            }
+            &__link{
+                @include mixins.Syne(14px, 500, 16px);
+                color: vars.$secondary-color;
+                opacity: 0.6;
+                padding: 10px 5px;
+                text-decoration: none;
+            }
+        }
+    }
+
+}
