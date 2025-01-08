@@ -1,0 +1,38 @@
+@use '../../../style/mixins';
+@use '../../../style/reset';
+@use '../../../style/vars';
+
+.section4 {
+    @include mixins.Flex(row, center, center, 100px);
+    .section4-arrow{
+        background-color:vars.$button-color;
+        padding:10px;
+        border-radius: 50px;
+        opacity: 0.5;
+        @include mixins.Flex(row, center, center, 10px);
+    }
+    &-container{
+        @include mixins.Flex(column, center, center, 64px);
+        &__title{
+            @include mixins.Syne(24px, 700, 29px);
+            color: vars.$button-color;
+        }
+        &__text{
+            @include mixins.Syne(48px, 500, 58px);
+           text-align: center;
+        }
+        &__img{
+            width: 6%;
+        }
+        &__name{
+            @include mixins.Syne(24px, 700, 29px);
+            opacity: 0.5;
+        }
+    }
+    .section4-arrow2{
+        background-color:vars.$button-color;
+        padding:10px;
+        border-radius: 50px;
+        @include mixins.Flex(row, center, center, 10px);
+    }
+}

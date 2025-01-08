@@ -22,7 +22,7 @@ function Section2() {
                     <div className="section2-card__box">
                         <div className="section2-card__box-textbox">
                             <p className="section2-card__box-textbox-text">Starting at</p>
-                            <p className="section2-card__box-textbox-text1">49/day</p>
+                            <p className="section2-card__box-textbox-text1">$49/day</p>
                         </div>
                         <button className="section2-card__box-btn">Rent</button>
                     </div>
