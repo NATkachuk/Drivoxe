@@ -4,7 +4,7 @@
 
 .section6 {
     @include mixins.Flex(column, flex-start, flex-start, 100px );
-    background-image: url(/Drivoxe/src/assets/homepage/png/back+.png);
+    background-image: url(../../../assets/homepage/png/Back+.png);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 80px 80px 80px 729px;
