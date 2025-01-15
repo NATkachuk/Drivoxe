@@ -1,0 +1,29 @@
+@use '../../../style/mixins';
+@use '../../../style/reset';
+@use '../../../style/vars';
+
+.section6 {
+    @include mixins.Flex(column, flex-start, flex-start, 100px );
+    background-image: url(/Drivoxe/src/assets/homepage/png/back+.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 80px 80px 80px 729px;
+    &-container {
+        @include mixins.Flex(column, flex-start, flex-start, 64px);
+        &__textbox {
+            @include mixins.Flex(column, flex-start, flex-start, 16px);
+            &-title {
+                @include mixins.Syne(56px, 700, 67px);
+                color: vars.$main-color;
+            }
+            &-text {
+                @include mixins.Syne(20px, 600, 24px);
+                color: vars.$main-color;
+                width: 62%;
+            }
+        }
+        &__images{
+            @include mixins.Flex(row, center, center, 16px);
+        }
+    }
+}
