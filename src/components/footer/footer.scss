@@ -1,0 +1,63 @@
+@use '../../style/mixins';
+@use '../../style/reset';
+@use '../../style/vars';
+
+.footer {
+    padding: 100px 0px;
+    @include mixins.Flex(row, center, center, 205px);
+    &-container {
+        @include mixins.Flex(column, flex-start, flex-start, 56px);
+        &__textbox {
+            @include mixins.Flex(column, flex-start, flex-start, 0px);
+            &-title {
+                @include mixins.Syne(56px, 700, 67px);
+                
+            }
+            &-text {
+                @include mixins.Syne(18px, 500, 24px);
+                opacity: 0.6;
+            }
+        }
+        .footer-label{
+            @include mixins.Flex(row, center, space-between, 0px);
+            @include mixins.Syne(14px, 500, 16px);
+            opacity: 0.6;
+            padding: 14px 32px;
+            width: 76%;
+            border-radius:50px;
+            border: 1px solid vars.$secondary-color;
+            &-input{
+                @include mixins.Syne(14px, 500, 16px);
+                opacity: 0.6;
+            }
+        }
+
+    }
+    &-container1{
+        @include mixins.Flex(column, center, center, 56px);
+        .footer-box{
+            @include mixins.Flex(row, flex-start, flex-start, 40px);
+            &__list{
+                @include mixins.Flex(column, flex-start, flex-start, 19px);
+                &-title{
+                    @include mixins.Syne(24px, 700, 29px);
+                }
+            }
+            &__link{
+                @include mixins.Syne(18px, 500, 24px);
+                color: vars.$secondary-color;
+            }
+        }
+        .footer-box1{
+            @include mixins.Flex(row, center, flex-start, 40px);
+            &__text{
+                @include mixins.Syne(14px, 500, 16px);
+            }
+            &__btn{
+                background-color: vars.$button-color;
+                padding: 10px 14px;
+                border-radius: 50px;
+            }
+         }
+    }
+}
