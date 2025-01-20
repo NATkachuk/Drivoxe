@@ -1,16 +1,18 @@
-import Footer from "./components/footer/Footer"
-import Header from "./components/header/Header"
-import Main from "./components/main/Main"
+import Layout from './pages/layout/Layout'
+import About from './pages/About/About'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 
 
 function App() {
 
   return (
-    <>
-      <Header />
-      <Main />
-      <Footer />
-    </>
+    <BrowserRouter basename="/Drivoxe">
+      <Routes>
+        <Route path="/" element={<Layout />} />
+        <Route path="About" element={<About />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 export default App

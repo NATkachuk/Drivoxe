@@ -1,5 +1,5 @@
 import './nav.scss';
-
+import { Link } from 'react-router-dom';
 function Nav() {
   return (
     <>
@@ -8,7 +8,7 @@ function Nav() {
                 <li className="nav__item"><a href="" className="nav__link">Service</a></li>
                 <li className="nav__item"><a href="" className="nav__link">Cars</a></li>
                 <li className="nav__item"><a href="" className="nav__link">Pricing</a></li>
-                <li className="nav__item"><a href="" className="nav__link">About</a></li>
+                <li className="nav__item"><Link to="/About" className="nav__link">About</Link></li>
             </ul>
         </nav>
     </>    

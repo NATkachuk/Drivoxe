@@ -1,0 +1,7 @@
+@use '../../style/mixins';
+@use '../../style/reset';
+@use '../../style/vars';
+
+.main-about {
+    @include mixins.Flex(column, flex-start, flex-start, 100px);
+}

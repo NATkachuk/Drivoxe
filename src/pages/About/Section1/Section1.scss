@@ -1,0 +1,11 @@
+@use '../../../style/mixins';
+@use '../../../style/reset';
+@use '../../../style/vars';
+
+.section1-about {
+    @include mixins.Flex(column, center, center, 56px);
+    &__title {
+        @include mixins.Syne(56px, 700, 67px);
+    }
+
+}
