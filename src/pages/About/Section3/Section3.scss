@@ -1,0 +1,36 @@
+@use '../../../style/mixins';
+@use '../../../style/reset';
+@use '../../../style/vars';
+
+.section3-about{
+    @include mixins.Flex(column,center,center,100px);
+    &__title{
+        @include mixins.Syne(56px,700,67px);
+    }
+    .section3-container {
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 28px;
+
+        .section3-box{
+            @include mixins.Flex(column,flex-start,flex-start,32px);
+            padding: 32px;
+            background-color: vars.$third-color;
+            border-radius: 10px;
+            &__cont{
+                @include mixins.Flex(row,center,flex-start,32px);
+                &-text{
+                    @include mixins.Syne(24px,700,29px);
+                }
+            }
+            &__text{
+                @include mixins.Syne(18px,500,24px);
+                opacity: 0.6;
+            }
+        }
+        .section3-box:hover{
+            border: 0.5px solid vars.$button-color;
+           background-color: vars.$main-color;
+        }
+    }
+}

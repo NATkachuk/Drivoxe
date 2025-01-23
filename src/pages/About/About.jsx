@@ -3,6 +3,7 @@ import Header from "../../components/header/Header"
 import Section2 from "./Section2/Section2"
 import Section1 from "./Section1/Section1"
 import './About.scss'
+import Section3 from "./Section3/Section3"
 
 
 
@@ -13,6 +14,7 @@ function About() {
         <main className="main-about">
             <Section1/>
             <Section2/>
+            <Section3/>
         </main>
         <Footer/>
     </>
