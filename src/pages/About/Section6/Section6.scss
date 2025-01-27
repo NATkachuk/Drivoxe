@@ -1,0 +1,23 @@
+@use '../../../style/mixins';
+@use '../../../style/reset';
+@use '../../../style/vars';
+
+.section6-about {
+    @include mixins.Flex(column, flex-start, center, 100px);
+    background-image: url(../../../assets/About/png/blackBackCar.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 80px 705px 80px 80px;
+    .section6-title {
+        @include mixins.Syne(56px, 700, 67px);
+        color: vars.$main-color;
+        width: 98%;
+    }
+    .section6-button {
+        @include mixins.Syne(16px, 700, 19px);
+        color: vars.$main-color;
+        background-color: vars.$button-color;
+        padding: 10px 26px;
+        border-radius: 32px;
+    }
+}

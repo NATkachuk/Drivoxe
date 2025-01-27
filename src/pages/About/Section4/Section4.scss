@@ -1,0 +1,59 @@
+@use '../../../style/mixins';
+@use '../../../style/reset';
+@use '../../../style/vars';
+
+.section4-about {
+    @include mixins.Flex(column, center, center, 100px );
+    .section4-textbox {
+        @include mixins.Flex(column, center, center, 16px);
+        &__title {
+            @include mixins.Syne(56px, 700, 67px);
+        }
+        &__text {
+            @include mixins.Syne(20px, 600, 24px);
+        }
+    }
+    .section4-cards {
+        @include mixins.Flex(column, center, center, 40px);
+        &-wrap {
+            @include mixins.Flex(row, center, center, 275px);
+        }
+        &-wrap2 {
+            @include mixins.Flex(row, center, center, 275px);
+            margin-left: 400px;
+        }
+        .section4-card1 {
+            @include mixins.Flex(row, center, center, 32px);
+            &__textbox {
+                @include mixins.Flex(column, flex-start, center, 32px);
+                &-title {
+                    @include mixins.Syne(24px, 700, 29px);
+                }
+                &-text {
+                    @include mixins.Syne(16px, 400, 19px);
+                    opacity: 0.6;
+                    width: 60%;
+                }
+            }
+            &__textbox2 {
+                @include mixins.Flex(column, flex-start, center, 32px);
+            }
+            &-back {
+                padding: 43px;
+                background-color: vars.$main-color;
+                border-radius: 20px;
+                /* Shadow & Blur */
+                box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.1);
+                border: 3px solid vars.$button-color;
+            }
+            &-back2 {
+                padding: 43px;
+                background-color: vars.$button-color;
+                border-radius: 20px;
+                /* Shadow & Blur */
+                box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.1);
+                border: 3px solid vars.$main-color;
+            }
+        }
+    }
+}

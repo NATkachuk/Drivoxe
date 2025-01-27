@@ -1,0 +1,33 @@
+@use '../../../style/mixins';
+@use '../../../style/reset';
+@use '../../../style/vars';
+
+.section5-about{
+    @include mixins.Flex(row,center,center,100px);
+    padding: 100px 60px;
+    .section5-textbox{
+        @include mixins.Flex(column,flex-start,flex-start,16px);
+        &__title{
+            @include mixins.Syne(56px, 700, 67px);
+        }
+        &__text{
+            @include mixins.Syne(20px, 600, 24px);
+        }
+    }
+    .section5-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        padding: 100px 72px;
+        background-color: vars.$third-color;
+        &__box{
+            @include mixins.Flex(column,flex-start,flex-start,32px);
+            padding: 32px;
+            background-color: vars.$third-color;
+            border-radius: 10px;
+            &-text{
+                @include mixins.Syne(16px, 700, 19px);
+            }
+        }
+    }
+}
