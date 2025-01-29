@@ -6,8 +6,8 @@ import Vanguard_CX2 from '../../../assets/homepage/png/Vanguard-CX2.png';
 import Stellar from '../../../assets/homepage/png/Stellar.png';
 import Vanguard_C from '../../../assets/homepage/png/Vanguard-C.png';
 
-
 function Section2() {
+        
   return (
     <section className="section2">
         <div className="section2-textbox">
@@ -16,6 +16,7 @@ function Section2() {
         </div>
         <div className="section2-container">
             <div className="section2-cards">
+
                 <div className="section2-card">
                     <img src={Horizon} alt="Horizon" className="section2-card__img" />
                     <h3 className="section2-card__title">Horizon Mirage Convertible</h3>
@@ -94,7 +95,7 @@ function Section2() {
             </div>
         </div>
     </section>
-  )
-}
+     )
+    }
 
 export default Section2

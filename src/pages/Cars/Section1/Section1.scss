@@ -1,0 +1,17 @@
+@use '../../../style/mixins';
+@use '../../../style/reset';
+@use '../../../style/vars';
+
+.section1-cars{
+    margin-top: 20px;
+    @include mixins.Flex(column,center,center,56px);
+    .section1-textbox{
+        @include mixins.Flex(column,center,center,22px);
+        &__text{
+            @include mixins.Syne(20px,600,24px);
+        }
+        &__title{
+            @include mixins.Syne(56px,700,67px);
+        }
+    }
+}
