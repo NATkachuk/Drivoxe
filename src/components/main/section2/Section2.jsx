@@ -84,15 +84,6 @@ function Section2() {
                     </div>
                 </div>
             </div>
-            <div className="section2-pagination">
-                <ul className="section2-pagination__list">
-                    <li className="section2-pagination__item"><a href="" className="section2-pagination__link">01</a></li>
-                    <li className="section2-pagination__item"><a href="" className="section2-pagination__link">02</a></li>
-                    <li className="section2-pagination__item"><a href="" className="section2-pagination__link">03</a></li>
-                    <li className="section2-pagination__item"><a href="" className="section2-pagination__link">04</a></li>
-                    <li className="section2-pagination__item"><a href="" className="section2-pagination__link">05</a></li>
-                </ul>
-            </div>
         </div>
     </section>
      )

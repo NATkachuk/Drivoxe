@@ -1,0 +1,30 @@
+@use '../../../style/mixins';
+@use '../../../style/reset';
+@use '../../../style/vars';
+
+.section3-cars{
+    margin-top: 100px;
+    background-image: url(../../../assets/Cars/png/DriverBack.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 56px 100px;
+    .section3-box{
+        @include mixins.Flex(column,flex-end,center,45px);
+        &__text{
+            @include mixins.Syne(20px,600,24px);
+            color: vars.$main-color;
+        }
+        &__title{
+            @include mixins.Syne(56px,700,67px);
+            color: vars.$main-color;
+            text-align: end;
+            width: 80%;
+        }
+        &__button{
+            padding: 10px 26px;
+            border-radius: 32px;
+            background-color: vars.$button-color;
+            color: vars.$main-color;
+        }
+    }
+}
