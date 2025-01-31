@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom';
 import ArrowLong from '../../assets/homepage/svg/ArrowLong.svg';
 import ArrowLongUp from '../../assets/homepage/svg/ArrowLongUp.svg';
 import './footer.scss'
+import Faqs from '../../pages/FAQS/Faqs';
 function Footer() {
   return (
     <footer className="footer">
@@ -23,7 +25,7 @@ function Footer() {
             <p className="footer-box__list-title">The Cars</p>
             <li className="footer-box__item"><a href="#" className="footer-box__link">How it works</a></li>
             <li className="footer-box__item"><a href="#" className="footer-box__link">Pick a car</a></li>
-            <li className="footer-box__item"><a href="#" className="footer-box__link">FAQs</a></li>
+            <li className="footer-box__item"><Link to="/Faqs" className='footer-box__link'>Faqs</Link></li>
           </ul>
           <ul className="footer-box__list">
             <p className="footer-box__list-title">Social Media</p>
