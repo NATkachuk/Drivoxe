@@ -1,0 +1,25 @@
+@use '../../../style/mixins';
+@use '../../../style/reset';
+@use '../../../style/vars';
+
+.section3-faqs{
+    margin-top: 100px;
+    padding: 100px 100px;
+    @include mixins.Flex(column,flex-start,center,24px);
+    .section3-title{
+        @include mixins.Syne(56px,700,67px);
+        width: 36%;
+    }
+    .section3-text{
+        @include mixins.Syne(20px,600,24px);
+    }
+    .section3-button{
+        padding: 10px 26px;
+        border-radius: 32px;
+        background-color: vars.$button-color;
+        color: vars.$main-color;
+    }
+    background-image: url(../../../assets/FAQS/png/FaqsRedCar.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,29 @@
+@use '../../../style/mixins';
+@use '../../../style/reset';
+@use '../../../style/vars';
+
+.section2-faqs{ 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-top: 100px;
+    .section2-container{
+        @include mixins.Flex(column,center,center,32px);
+        &__box{
+            @include mixins.Flex(column,flex-start,flex-start,25px);
+            &-title{
+                @include mixins.Syne(24px,700,29px);
+            }
+            &-wrap{
+                @include mixins.Flex(column,flex-start,flex-start,16px);
+
+            }
+            &-cont{
+                @include mixins.Flex(row,flex-start,flex-start,16px);
+                }
+                &-text{
+                    @include mixins.Syne(18px,500,24px);
+                }
+            }
+        }
+    } 
